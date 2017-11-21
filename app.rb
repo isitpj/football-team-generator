@@ -3,7 +3,7 @@ require 'sinatra/base'
 class TeamGenerator < Sinatra::Base
 
   get '/' do
-    'Hola, mundo'
+    erb :home
   end
 
   run! if app_file == $0
