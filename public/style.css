@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0px;
+  font-family: serif;
 }
 
 #background {
@@ -12,4 +13,38 @@ html, body {
   background-size: 100%;
   background-position: center;
   display: flex;
+}
+
+#title-box {
+  width: 90%;
+  max-width: 800px;
+  height: 200px;
+  background-color: rgba(0,0,0,0.4);
+  margin-top: 70px;
+  margin-left: 80px;
+  margin-bottom: auto;
+  margin-right: auto;
+}
+
+#title {
+  color: #fff;
+  margin: 0px;
+  text-align: left;
+  margin-left: 1em;
+  border-left: black 5px solid;
+}
+
+#title h1 {
+  font-size: 5em;
+  font-weight: bold;
+  margin: 20px 5px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+#title p {
+  font-size: 2em;
+  margin-top: 0px;
+  margin-left: 5px;
+  padding-left: 10px;
 }
