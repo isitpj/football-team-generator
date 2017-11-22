@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
   margin: 0px;
-  font-family: serif;
+  font-family: 'Hind', sans-serif;
 }
 
 #background {
@@ -17,8 +17,8 @@ html, body {
 
 #title-box {
   width: 90%;
-  max-width: 800px;
-  height: 200px;
+  max-width: 850px;
+  min-height: 100px;
   background-color: rgba(0,0,0,0.6);
   margin-top: 50px;
   margin-left: 80px;
@@ -32,19 +32,25 @@ html, body {
   text-align: left;
   margin-left: 1em;
   border-left: #3af5ff 5px solid;
+  transition: 0.5s;
+}
+
+#title:hover {
+  border-left: #ff9400 5px solid;
 }
 
 #title h1 {
   font-size: 5em;
   font-weight: bold;
-  margin: 20px 5px;
+  margin: 0px;
+  margin-top: 30px;
   padding-left: 10px;
-  margin-bottom: 0px;
 }
 
 #title p {
   font-size: 2em;
-  margin-top: 0px;
-  margin-left: 5px;
+  font-weight: 150;
+  margin: 0px;
+  margin-bottom: 30px;
   padding-left: 10px;
 }
