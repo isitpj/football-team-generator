@@ -10,8 +10,7 @@ html, body {
   background-image: url("/images/stock_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  background-position: right;
   display: flex;
 }
 
