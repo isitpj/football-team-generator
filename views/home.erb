@@ -21,10 +21,11 @@
         <p>- enter your players in the box below (and separate them all with commas)</p>
         <p>- click the generate button</p>
         <p>- play some football</p>
+        <form method="post" action="/teams">
+          <input id="player-input" type="text" placeholder="enter player names" name="players">
+          <input id="generate-button" type="submit" value="generate">
+        </form>
       </div>
-      <form method="post" action="/teams">
-        <input type="text" placeholder="enter player names" name="players">
-      </form>
     </div>
 
   </div>

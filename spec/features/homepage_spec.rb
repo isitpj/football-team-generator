@@ -7,4 +7,8 @@ feature 'Sets up the home page' do
     visit '/'
     expect(page).to have_field 'players'
   end
+  scenario 'Renders a button allowing the player to submit their players to generate two teams' do
+    visit '/'
+    expect(page).to have_button 'generate'
+  end
 end
