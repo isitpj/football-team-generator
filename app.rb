@@ -8,9 +8,12 @@ class TeamGenerator < Sinatra::Base
   end
 
   post '/teams' do
-    'Page under construction, please check back soon'
     @players_string = params[:players]
-    @players_array = @players.split(',')
+    redirect '/teams'
+  end
+
+  get '/teams' do
+    'Page under construction, please check back soon'
   end
 
   run! if app_file == $0
