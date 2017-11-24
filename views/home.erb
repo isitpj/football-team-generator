@@ -5,24 +5,29 @@
   <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 </head>
 <body>
+
   <div id="background">
+
     <div id="title">
       <div id="title-box">
         <h1>teamGen</h1>
         <p>welcome to teamGen, the simple online team generator</p>
       </div>
     </div>
+
     <div id="form">
       <div id="form-box">
-        <form method="post" action="/teams">
-          <h2>who's playing?</h2>
-          <p>enter your players in the box below, separating them all with commas
-          <br>
-          then, click the generate button, and </p>
-          <input type="text" name="players">
-        </form>
+        <h2>who's playing?</h2>
+        <p>- enter your players in the box below (and separate them all with commas)</p>
+        <p>- click the generate button</p>
+        <p>- play some football</p>
       </div>
+      <form method="post" action="/teams">
+        <input type="text" placeholder="enter player names" name="players">
+      </form>
     </div>
+
   </div>
+
 </body>
 </html>
