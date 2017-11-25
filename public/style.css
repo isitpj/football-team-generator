@@ -12,12 +12,12 @@ html, body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+  background-attachment: fixed;
 }
 
 #title {
   width: 90%;
   max-width: 850px;
-  min-width: 850px;
   min-height: 100px;
   display: block;
   margin-top: 50px;
@@ -31,6 +31,7 @@ html, body {
 #title-box {
   margin-top: 30px;
   margin-bottom: 30px;
+  min-width: 800px;
   display: inline-block;
   text-align: left;
   margin-left: 1em;
@@ -60,7 +61,6 @@ html, body {
 #form {
   width: 90%;
   max-width: 850px;
-  min-width: 850px;
   min-height: 400px;;
   margin-top: 100px;
   display: block;
@@ -76,6 +76,7 @@ html, body {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 1em;
+  min-width: 800px;
   display: inline-block;
   border-left: #3af5ff 5px solid;
   transition: 0.5s;
