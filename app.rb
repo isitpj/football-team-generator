@@ -2,12 +2,14 @@ ENV['RACK_ENV'] ||= 'development'
 require 'sinatra/base'
 
 class TeamGenerator < Sinatra::Base
+  enable :sessions
 
   get '/' do
     erb :home
   end
 
   post '/teams' do
+    session[:players] = params[:players]
     redirect '/teams'
   end
 
@@ -15,5 +17,5 @@ class TeamGenerator < Sinatra::Base
     erb :teams
   end
 
-  run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end
