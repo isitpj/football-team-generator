@@ -1,34 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="<%= url("/style.css") %>">
-  <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
-</head>
-<body>
-
-  <div id="background">
-
-    <div id="title">
-      <div id="title-box">
-        <h1>teamGen</h1>
-        <p>welcome to teamGen, the simple online team generator</p>
-      </div>
-    </div>
-
-    <div id="form">
-      <div id="form-box">
-        <h2>who's playing?</h2>
-        <p>- enter your players in the box below (and separate them all with commas)</p>
-        <p>- click the generate button</p>
-        <p>- play some football</p>
-        <form method="post" action="/teams">
-          <input id="player-input" type="text" placeholder="enter player names" name="players">
-          <input id="generate-button" type="submit" value="generate">
-        </form>
-      </div>
-    </div>
-
+<div id="title">
+  <div id="title-box">
+    <h1>teamGen</h1>
+    <p>welcome to teamGen, the simple online team generator</p>
   </div>
+</div>
 
-</body>
-</html>
+<div id="form">
+  <div id="form-box">
+    <h2>who's playing?</h2>
+    <p>- enter your players in the box below (and separate them all with commas)</p>
+    <p>- click the generate button</p>
+    <p>- play some football</p>
+    <form method="post" action="/teams">
+      <input id="player-input" type="text" placeholder="enter player names" name="players">
+      <input id="generate-button" type="submit" value="generate">
+    </form>
+  </div>
+</div>
