@@ -1,10 +1,11 @@
 require './lib/game'
+require './lib/player'
 
 describe Game do
-  game = Game.create
+  game = Game.new
 
   it 'Should have players, initialised as an empty array' do
-    expect(game.players).to eq []
+    expect(game.player_names).to eq []
   end
 
   it 'Should have a team_one' do
@@ -19,12 +20,25 @@ describe Game do
     it 'Should create a new instance of Game' do
       expect(Game.create).to be_an_instance_of Game
     end
+
+    it 'Should allow an array of names to be passed in to the players attribute' do
+      game = Game.create(['Peter, Mark, Ed'])
+      expect(Game.instance.player_names).to eq ['Peter, Mark, Ed']
+    end
   end
 
   describe '.instance' do
     it 'Should return an instance of itself' do
       game = Game.create
       expect(Game.instance).to eq game
+    end
+  end
+
+  describe '#create_players' do
+    it 'Should return an array of Player objects' do
+      Game.create(['Peter'])
+      Game.instance.create_players
+      expect(Game.instance.players[0]).to be_an_instance_of Player
     end
   end
 end
