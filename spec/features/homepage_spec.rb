@@ -11,9 +11,4 @@ feature 'Sets up the home page' do
     visit '/'
     expect(page).to have_button 'generate'
   end
-  scenario 'test' do
-    visit '/'
-    fill_in 'players', with: 'peter, mark, ainsley'
-    click_button 'generate'
-  end
 end
