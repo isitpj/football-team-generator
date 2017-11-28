@@ -22,8 +22,8 @@ describe Game do
     end
 
     it 'Should allow an array of names to be passed in to the players attribute' do
-      game = Game.create(['Peter, Mark, Ed'])
-      expect(Game.instance.player_names).to eq ['Peter, Mark, Ed']
+      game = Game.create('Peter, Mark, Ed')
+      expect(Game.instance.player_names).to eq 'Peter, Mark, Ed'
     end
   end
 
@@ -36,9 +36,25 @@ describe Game do
 
   describe '#create_players' do
     it 'Should return an array of Player objects' do
-      Game.create(['Peter'])
+      Game.create('Peter')
       Game.instance.create_players
       expect(Game.instance.players[0]).to be_an_instance_of Player
+    end
+  end
+
+  describe '#assign_teams' do
+    it '@team_one.length should equal 2' do
+      Game.create('Peter, Mark, Ed, Ainsley')
+      Game.instance.create_players
+      Game.instance.assign_teams
+      expect(Game.instance.team_one.length).to eq 2
+    end
+
+    it '@team_two.length should equal 2' do
+      Game.create('Peter, Mark, Ed, Ainsley')
+      Game.instance.create_players
+      Game.instance.assign_teams
+      expect(Game.instance.team_two.length).to eq 2
     end
   end
 end

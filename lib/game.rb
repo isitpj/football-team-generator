@@ -17,8 +17,21 @@ class Game
   end
 
   def create_players
-    @player_names.each do |name|
+    @player_names.split(',').each do |name|
       @players << Player.new(name)
     end
+  end
+
+  def assign_teams
+    shuffle_players
+    @players.each do |player|
+      @players.index(player) >= (@players.length / 2) ? @team_one << player : @team_two << player
+    end
+  end
+
+  private
+
+  def shuffle_players
+    @players.shuffle!
   end
 end
