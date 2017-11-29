@@ -20,7 +20,6 @@ class TeamGenerator < Sinatra::Base
   end
 
   get '/teams' do
-    p @game
     @team_one = @game.team_one
     erb :teams
   end
