@@ -13,4 +13,5 @@ feature 'Displays the two teams' do
     click_button 'generate'
     expect('Peter, Ed, Ignacio, Alex, Umair').to appear_before('Team Two')
   end
+
 end

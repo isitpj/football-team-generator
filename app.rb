@@ -21,6 +21,7 @@ class TeamGenerator < Sinatra::Base
   end
 
   get '/teams' do
+    p Game
     erb :teams
   end
 
