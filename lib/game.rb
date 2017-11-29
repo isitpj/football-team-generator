@@ -18,7 +18,7 @@ class Game
 
   def create_players
     @player_names.split(',').each do |name|
-      @players << Player.new(name)
+      @players << Player.new(name.strip)
     end
   end
 
