@@ -140,7 +140,3 @@ html, body {
 #generate-button:hover {
   color: #fff;
 }
-
-#generate-button:focus {
-  letter-spacing: 15px;
-}
