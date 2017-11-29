@@ -1,3 +1,5 @@
 <h1>Team One</h1>
-<%= p Game.instance %>
+<% @team_one.each do |player| %>
+  <%= player.name %>
+<% end %>
 <h1>Team Two</h1>

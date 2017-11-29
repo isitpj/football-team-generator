@@ -17,7 +17,6 @@ describe Game do
   end
 
   describe '.create' do
-
     it 'Should create a new instance of Game' do
       expect(Game.create).to be_an_instance_of Game
     end
@@ -26,30 +25,24 @@ describe Game do
       game = Game.create('Peter, Mark, Ed')
       expect(Game.instance.player_names).to eq 'Peter, Mark, Ed'
     end
-
   end
 
   describe '.instance' do
-
     it 'Should return an instance of itself' do
       game = Game.create
       expect(Game.instance).to eq game
     end
-
   end
 
   describe '#create_players' do
-
     it 'Should return an array of Player objects' do
       Game.create('Peter')
       Game.instance.create_players
       expect(Game.instance.players[0]).to be_an_instance_of Player
     end
-
   end
 
   describe '#assign_teams' do
-
     it '@team_one.length should equal 2' do
       Game.create('Peter, Mark, Ed, Ainsley')
       Game.instance.create_players
@@ -63,7 +56,5 @@ describe Game do
       Game.instance.assign_teams
       expect(Game.instance.team_two.length).to eq 2
     end
-
   end
-  
 end

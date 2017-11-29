@@ -4,7 +4,6 @@ require './lib/game'
 require './lib/player'
 
 class TeamGenerator < Sinatra::Base
-
   before do
     @game = Game.instance
   end
@@ -21,7 +20,8 @@ class TeamGenerator < Sinatra::Base
   end
 
   get '/teams' do
-    p Game
+    p @game
+    @team_one = @game.team_one
     erb :teams
   end
 
