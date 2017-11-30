@@ -1,5 +1,8 @@
 <h1>Team One</h1>
-<% Game.instance.team_one.each do |player| %>
+<% @team_one.each do |player| %>
   <p><%= player.name %></p>
 <% end %>
 <h1>Team Two</h1>
+<% @team_two.each do |player| %>
+  <p><%= player.name %></p>
+<% end %>

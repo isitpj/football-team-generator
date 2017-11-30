@@ -22,8 +22,7 @@ class TeamGenerator < Sinatra::Base
 
   get '/teams' do
     @team_one = @game.team_one
-    p 'IN THE CONTROLLER'
-    p Game.instance.team_one
+    @team_two = @game.team_two
     erb :teams
   end
 
