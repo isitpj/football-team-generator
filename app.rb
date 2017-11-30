@@ -2,6 +2,7 @@ ENV['RACK_ENV'] ||= 'development'
 require 'sinatra/base'
 require './lib/game'
 require './lib/player'
+require 'pry'
 
 class TeamGenerator < Sinatra::Base
   before do
@@ -21,6 +22,8 @@ class TeamGenerator < Sinatra::Base
 
   get '/teams' do
     @team_one = @game.team_one
+    p 'IN THE CONTROLLER'
+    p Game.instance.team_one
     erb :teams
   end
 
