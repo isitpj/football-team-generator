@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+  width: 100%;
   display: inline-block;
   background-image: url("/images/stock_background.jpg");
   background-size: cover;
@@ -14,14 +15,11 @@ body {
 }
 
 .box {
-  width: 90%;
-  max-width: 900px;
   background-color: rgba(0,0,0,0.6);
   color: #fff;
   margin-bottom: auto;
   margin-right: auto;
   display: block;
-
 }
 
 #title {
@@ -33,6 +31,7 @@ body {
 #form {
   min-height: 400px;
   margin-top: 100px;
+  margin-bottom: 100px;
   margin-left: 80px;
 }
 
@@ -46,6 +45,7 @@ body {
   transition: 0.5s;
   padding-right: 2em;
   color: #fff;
+  text-transform: lowercase;
 }
 
 .content-box:hover {
@@ -54,7 +54,6 @@ body {
 
 .content-box h1, .content-box p {
   padding-left: 10px;
-
 }
 
 #title-box h1 {
@@ -122,4 +121,62 @@ body {
 
 #generate-button:hover {
   color: #fff;
+}
+
+#team-one-wrapper {
+  margin-top: 100px;
+  margin-left: 8%;
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  min-width: 450px;
+  margin-bottom: 50px;
+}
+
+#team-one-box {
+  display: inline-block;
+  float: left;
+  padding-right: none;
+  padding-left: 32px;
+}
+
+#team-two-wrapper {
+  width: 30%;
+  float: right;
+  margin-right: 8%;
+  margin-top: 100px;
+  display: inline-block;
+  clear: both;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#team-two-box {
+  border-left: none;
+  border-right: #3af5ff 5px solid;
+  margin-left: none;
+  margin-right: 1em;
+  transition: 0.5s;
+  float: right;
+  padding: none;
+  min-width: 450px;
+}
+
+#team-two-box:hover {
+  border-right: #ff9400 5px solid;
+}
+
+#team-one-box h1 {
+  margin: 0px;
+  font-size: 5em;
+}
+
+#team-two-box h1 {
+  font-size: 5em;
+  margin: 0px;
+}
+
+#team-one-box p, #team-two-box p {
+  font-size: 3em;
+  margin: 20px;
 }

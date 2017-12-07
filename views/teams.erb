@@ -1,8 +1,16 @@
-<h1>Team One</h1>
-<% @team_one.each do |player| %>
-  <p><%= player.name %></p>
-<% end %>
-<h1>Team Two</h1>
-<% @team_two.each do |player| %>
-  <p><%= player.name %></p>
-<% end %>
+<div class="box" id="team-one-wrapper">
+  <div class="content-box" id="team-one-box">
+    <h1>Team One</h1>
+    <% @team_one.each do |player| %>
+    <p><%= player.name %></p>
+    <% end %>
+  </div>
+</div>
+<div class="box" id="team-two-wrapper">
+  <div class="content-box" id="team-two-box">
+    <h1>Team Two</h1>
+    <% @team_two.each do |player| %>
+    <p><%= player.name %></p>
+    <% end %>
+  </div>
+</div>
