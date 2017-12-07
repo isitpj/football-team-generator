@@ -1,7 +1,11 @@
 feature 'Displays the two teams' do
   before do
-    allow_any_instance_of(Game).to receive(:team_one).and_return([Player.new('Ed'), Player.new('Mark')])
-    allow_any_instance_of(Game).to receive(:team_two).and_return([Player.new('Peter'), Player.new('Ainsley')])
+    player_ed = double('player_ed', name: 'Ed')
+    player_mark = double('player_mark', name: 'Mark')
+    player_peter = double('player_peter', name: 'Peter')
+    player_ainsley = double('player_ainsley', name: 'Ainsley')
+    allow_any_instance_of(Game).to receive(:team_one).and_return([player_ed, player_mark])
+    allow_any_instance_of(Game).to receive(:team_two).and_return([player_peter, player_ainsley])
   end
 
   scenario 'The page is set up with two blank teams' do
