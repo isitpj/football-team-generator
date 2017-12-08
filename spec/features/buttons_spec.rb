@@ -15,4 +15,17 @@ feature 'Displays buttons giving the user action options' do
     expect(page).to have_xpath('/')
     expect(page).to have_content 'teamGen'
   end
+
+  scenario 'Clicking \'reshuffle teams\' reloads the page with newly reshuffled teams' do
+    visit '/'
+    fill_in 'players', with: 'Peter, Ed, Mark, Ainsley'
+    click_button 'generate'
+    allow_any_instance_of(Game).to receive(:team_one).and_return([Player.new('Ed'), Player.new('Peter')])
+    allow_any_instance_of(Game).to receive(:team_two).and_return([Player.new('Ainsley'), Player.new('Mark')])
+    click_button 'reshuffle teams'
+    expect('Ed').to appear_before('Team Two')
+    expect('Peter').to appear_before('Team Two')
+    expect('Team Two').to appear_before('Ainsley')
+    expect('Team Two').to appear_before('Mark')
+  end
 end

@@ -26,5 +26,10 @@ class TeamGenerator < Sinatra::Base
     erb :teams
   end
 
+  post '/shuffle_teams' do
+    @game.assign_teams
+    redirect '/teams'
+  end
+
   run! if app_file == $PROGRAM_NAME
 end
