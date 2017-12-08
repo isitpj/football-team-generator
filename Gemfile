@@ -2,8 +2,8 @@ source 'https://www.rubygems.org'
 
 ruby '2.4.1'
 
-gem 'rack-flash-session'
 gem 'pry'
+gem 'rack-flash-session'
 gem 'rubocop'
 gem 'simplecov', require: false
 gem 'sinatra'

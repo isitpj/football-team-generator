@@ -24,6 +24,7 @@ class Game
 
   def assign_teams
     shuffle_players
+    reset_teams
     @players.each do |player|
       @players.index(player) < (@players.length / 2) ? @team_one << player : @team_two << player
     end
@@ -33,5 +34,10 @@ class Game
 
   def shuffle_players
     @players.shuffle!
+  end
+
+  def reset_teams
+    @team_one = []
+    @team_two = []
   end
 end
